@@ -1,0 +1,34 @@
+A description of each and every file is given Here in the Descriptopn.txt File/
+
+
+Folders:
+    1. Data: Data File Contains all the image data segmented into diffferent sub-folders.
+
+
+Python Files:
+    1. data_collection.py: Used to collect images for traning samples(In our case we did the utilization on pre-collected data).
+
+    2. create_dataset.py: Used to extract important points from the colledted image dataset. Saved to data.pickle file.
+
+    3. set_label.py: Reads features from data.pickle and labels them, and stores into d2.pickle file.
+
+    4. outlier_noise_manager.py:Reads data from d2.pickle, checks for the outliers those are noise. Removes them, and save the actual data points. Saves them in d3.pickle.
+
+    5. train.py: Uses the d3.pickle data and trains them on RandomForestClassifier and saves the model into model.p file.
+
+    6. test.py: Used to realtime testing of the trained model.
+
+
+Pickle Files:
+    1. data.pickle: Extracted important points from images are stored.
+
+    2. d2.pickle: Data is stored with label.
+
+    3. d3.pickle: Outlier-noise is removed from the dataset, and stored.
+
+
+Model File:
+    1. model.p: Bias and  variance data from Random Forest Classifier is stored as a model parameters.
+
+Pdf File:
+    1. sensors-21-05856.pdf: The Resarchb Paper.
